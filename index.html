@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="Luca Glock">
+    <title>Calculadora de Dolares</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <header class="containerHeader">
+        <h1 class="texto">
+            Calculadora de Dolares
+        </h1>
+    </header>
+
+    <main class="d-flex justify-content-center col-12">
+        <form class="row row-cols-lg-auto g-3 align-items-center">
+            <div class="col-12">
+            <label class="visually-hidden" for="inlineFormInputGroupUsername">Cantidad</label>
+            <div class="input-group">
+                <div class="input-group-text">$</div>
+                <input type="number" class="form-control" id="CantidadDolares" placeholder="Cantidad...">
+            </div>
+            </div>
+            <div class="col-12">
+            <label class="visually-hidden" for="inlineFormSelectPref">Tipo</label>
+            <select class="form-select" id="TipoDolar">
+                <option value="oficial">Oficial</option>
+                <option value="blue">Blue</option>
+                <option value="solidario">Solidario</option>
+                <option value="turista">Bolsa</option>
+            </select>
+            </div>
+        
+            <div class="col-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="AplicarImpuestos" checked>
+                <label class="form-check-label" for="inlineFormCheck">
+                Aplicar impuestos
+                </label>
+            </div>
+            </div>
+            <div class="col-12">
+            <button type="submit" class="btn btn-primary calcular" id="calcular">Calcular</button>
+            </div>
+        </form>
+    </main>
+    <div class="col-12">
+        <div class="container">
+            <div class="row">
+                <div class="col-3"></div> <!-- Espacio a la izquierda -->
+                <div class="col-6">
+                    <section class="my-4 textototal resultado">
+                        <!-- Tu contenido aquí -->
+                    </section>
+                </div>
+                <div class="col-3"></div> <!-- Espacio a la derecha -->
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center col-12 guardar">
+        
+    </div>
+    <h2 class="resultadosAnteriores"></h2>
+    <ul class="lista-resultados">
+        <!-- Aquí se mostrarán los resultados guardados -->
+    </ul>
+    <!-- SCRIPTS -->
+    <script src="main.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- Alertas -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> <!-- BS -->
+</body>
+</html>
